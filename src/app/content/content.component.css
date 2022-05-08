@@ -1,0 +1,22 @@
+/* CSS Document */
+
+/*PAGE LAYOUT*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+#contenttext{float:right; width:526px;}
+
+.titletext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color:#CC0000;
+}
+/*TEXT STYLES*/
+.bodytext {
+	font: 0.7em Tahoma, sans-serif;
+	color: #666666;
+}
