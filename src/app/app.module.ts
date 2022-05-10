@@ -5,10 +5,9 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { DepartmentComponent } from './department/department.component';
 import { RedtieComponent } from './redtie/redtie.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
+import { CoreModule } from './core/core.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,14 +15,11 @@ import { ContentComponent } from './content/content.component';
     StudentComponent,
     DepartmentComponent,
     RedtieComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
     ContentComponent
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,CoreModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

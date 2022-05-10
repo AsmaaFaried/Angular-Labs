@@ -1,1 +1,35 @@
-<h1>Hello from my student Component</h1>
+<h1>Students Data</h1>
+<div class="bg-secondary w-50 p-2">
+  <input type="text" [(ngModel)]="nstd.id" class="m-1 form-control w-50" placeholder="Student Id">
+  <input type="text" [(ngModel)]="nstd.name" class="m-1 form-control w-50" placeholder="Student Name">
+  <input type="text" [(ngModel)]="nstd.age"  class="m-1 form-control w-50" placeholder="Student age">
+  <input type="text" [(ngModel)]="nstd.deptno"  class="m-1 form-control w-50" placeholder="Department number">
+
+  <button (click)="add()" class="btn btn-primary m-3">Add</button>
+
+</div>
+<table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
+  <thead class="thead-inverse|thead-default">
+    <tr>
+      <th>Id</th>
+      <th>Student Name</th>
+      <th>Student Age</th>
+      <th>Department Number</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of stds">
+        <td scope="row">{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.deptno }}</td>
+        <td>
+          <button class="btn btn-info" (click)="show(item.id)">Details</button>
+          <button class="m-2 btn btn-warning" (click)="remove(item.id)">Remove</button>
+        </td>
+      </tr>
+
+    </tbody>
+</table>
+
