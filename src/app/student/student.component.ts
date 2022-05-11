@@ -15,7 +15,8 @@ export class StudentComponent{
 
   std:Student=new Student(1,"asmaa",23,1);
   nstd:Student=new Student(0,"",0,0);
-
+  names:string[]=["Asmaa","Omar","Sara","Monica","Ali","Ahlam"];
+  name="Yara";
   stds:Student[]=[
     new Student(2,"monica",24,2),
     new Student(3,"hader",27,3),

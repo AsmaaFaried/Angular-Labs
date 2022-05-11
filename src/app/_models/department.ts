@@ -1,9 +1,10 @@
 export class Department {
 
-  constructor(public id:number,public name:string,public location:string){
+  constructor(public id:number,public name:string,public location:string,public rate:number){
     this.id=id;
     this.name=name;
     this.location=location;
+    this.rate=rate;
   }
 
 }

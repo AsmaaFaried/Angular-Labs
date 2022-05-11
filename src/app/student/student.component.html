@@ -1,4 +1,18 @@
 <h1>Students Data</h1>
+<h3>all Names</h3>
+<input class="m-1 form-control w-25" type="text" [(ngModel)]="name" placeholder="Enter Student name" >
+<button class="btn btn-primary" (click)="names.push(name)">ADD</button>
+<ul>
+  <li *ngFor="let item of names">
+    {{ item }}
+  </li>
+</ul>
+<h3>Array Splice Filter of names start with A letter</h3>
+<ul>
+  <li *ngFor="let item of names|arraySplice">
+    {{ item }}
+  </li>
+</ul>
 <div class="bg-secondary w-50 p-2">
   <input type="text" [(ngModel)]="nstd.id" class="m-1 form-control w-50" placeholder="Student Id">
   <input type="text" [(ngModel)]="nstd.name" class="m-1 form-control w-50" placeholder="Student Name">

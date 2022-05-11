@@ -1,4 +1,6 @@
+
 <h1>Department Data</h1>
+
 
 <div class="bg-secondary w-50 p-2">
   <input type="text" [(ngModel)]="ndept.id" class="m-1 form-control w-50" placeholder="Department Id">
@@ -8,6 +10,8 @@
 
 </div>
 
+
+
 <table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
   <thead class="thead-inverse|thead-default">
     <tr>
@@ -15,16 +19,20 @@
       <th>Id</th>
       <th>Department Name</th>
       <th>Department Location</th>
-      <th></th>
+      <th>Rate</th>
+      <th>Operations</th>
     </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of depts;let ser=index">
+      <tr *ngFor="let item of depts;let ser=index ">
+
         <td>{{ ser+1 }}</td>
         <td >{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.location }}</td>
+        <td>{{ item.name| stringConvert}}</td>
+        <td>{{ item.location |stringConvert}}</td>
+        <td><app-rate [rating]="item.rate"></app-rate></td>
         <td>
+
           <button class="btn btn-info" (click)="show(item.id)">Details</button>
           <button class="m-2 btn btn-warning" (click)="remove(item.id)">Remove</button>
         </td>

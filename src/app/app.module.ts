@@ -8,6 +8,9 @@ import { RedtieComponent } from './redtie/redtie.component';
 import { ContentComponent } from './content/content.component';
 import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
+import { StringConvertPipe } from './string-convert.pipe';
+import { ArraySplicePipe } from './array-splice.pipe';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,13 @@ import { FormsModule } from '@angular/forms';
     StudentComponent,
     DepartmentComponent,
     RedtieComponent,
-    ContentComponent
+    ContentComponent,
+    StringConvertPipe,
+    ArraySplicePipe
 
   ],
   imports: [
-    BrowserModule,CoreModule,FormsModule
+    BrowserModule,CoreModule,FormsModule,SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
