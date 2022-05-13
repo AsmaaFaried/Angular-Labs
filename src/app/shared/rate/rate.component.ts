@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-rate',
@@ -7,6 +7,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class RateComponent implements OnInit,OnChanges {
 
+  @Output() rateClicked:EventEmitter<number>=new EventEmitter<number>();
   @Input() rating=2;
   cwidth:number=0;
   constructor() {
@@ -19,4 +20,7 @@ export class RateComponent implements OnInit,OnChanges {
   ngOnInit(): void {
   }
 
+  rateFun(){
+    this.rateClicked.emit(this.rating);
+  }
 }

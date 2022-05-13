@@ -44,4 +44,8 @@ export class DepartmentComponent implements OnInit {
     }
   }
 
+  deptFun(s:any){
+    alert(s);
+  }
+
 }

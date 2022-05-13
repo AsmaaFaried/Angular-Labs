@@ -30,7 +30,7 @@
         <td >{{ item.id }}</td>
         <td>{{ item.name| stringConvert}}</td>
         <td>{{ item.location |stringConvert}}</td>
-        <td><app-rate [rating]="item.rate"></app-rate></td>
+        <td><app-rate [rating]="item.rate" (rateClicked)="deptFun(item.rate)" ></app-rate></td>
         <td>
 
           <button class="btn btn-info" (click)="show(item.id)">Details</button>

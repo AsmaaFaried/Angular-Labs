@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { StringConvertPipe } from './string-convert.pipe';
 import { ArraySplicePipe } from './array-splice.pipe';
 import { SharedModule } from './shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { SharedModule } from './shared/shared.module';
 
   ],
   imports: [
-    BrowserModule,CoreModule,FormsModule,SharedModule
+    BrowserModule,CoreModule,FormsModule,SharedModule,BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
