@@ -9,7 +9,7 @@ export class StudentService {
   private stds:Student[]=[
     new Student(1,"asmaa",1),
     new Student(2,"faried",2),
-    new Student(3,"John",2),
+    new Student(3,"John",3),
   ];
   constructor() { }
   getAllStds(){
