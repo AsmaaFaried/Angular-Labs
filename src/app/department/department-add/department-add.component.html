@@ -1,0 +1,12 @@
+<h1 class="m-5 ">Depatment</h1>
+<div class="bg-secondary m-5 w-50 p-2">
+  <input class="m-1 form-control w-50" type="text" [(ngModel)]="ndept._id" placeholder="Enter department id">
+  <input class="m-1 form-control w-50" type="text" [(ngModel)]="ndept.name" placeholder="Enter department name">
+  <select class="m-1 form-select w-50" aria-label="Select Location.." [(ngModel)]="ndept.location">
+    <option>Alex</option>
+    <option>Mansoura</option>
+    <option>Smart</option>
+  </select>
+
+  <button class="btn btn-primary m-3" (click)="save()">Save</button>
+</div>
