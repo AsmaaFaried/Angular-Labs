@@ -1,10 +1,13 @@
-<app-student-add></app-student-add>
+<!-- <a class="btn btn-outline-success m-5 w-25" [routerLink]="['/students/add']" >ADD Student</a> -->
+<button class="btn btn-outline-success m-5 w-25" (click)="addStd()">ADD Student</button>
+
 <table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive w-50 m-5">
   <thead class="thead-inverse|thead-default">
     <tr>
       <th>Id</th>
       <th>Name</th>
       <th>Department number</th>
+      <th>Options</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +15,9 @@
       <td>{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.deptno }}</td>
+      <td>
+        <a class="btn btn-outline-info m-5 w-25" [routerLink]="['/students/details',item.id]">Details</a>
+      </td>
     </tr>
 
   </tbody>

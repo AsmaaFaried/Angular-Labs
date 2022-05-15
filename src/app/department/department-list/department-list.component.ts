@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DepartmentService } from 'src/app/department.service';
 import { Department } from 'src/app/_models/department';
 
@@ -11,7 +12,7 @@ export class DepartmentListComponent implements OnInit {
 
   deptlst:Department[]=[];
 
-  constructor(public deptser:DepartmentService) {
+  constructor(public deptser:DepartmentService,public router:Router) {
 
   }
 
@@ -19,5 +20,9 @@ export class DepartmentListComponent implements OnInit {
     this.deptlst=this.deptser.getAllDepts();
   }
 
+  addDept(){
+    this.router.navigateByUrl("/departments/add");
+  }
+ 
 
 }

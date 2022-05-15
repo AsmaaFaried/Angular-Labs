@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { StudentService } from 'src/app/student.service';
+import { Student } from 'src/app/_models/student';
 
 @Component({
   selector: 'app-student-details',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentDetailsComponent implements OnInit {
 
-  constructor() { }
+  id=0;
+  std:Student | null =new Student(0,"",0);
+  constructor(public ac:ActivatedRoute,public stdSer:StudentService) { }
 
   ngOnInit(): void {
+    this.std=this.stdSer.getStd(this.ac.snapshot.params['id']);
+    this.id=this.ac.snapshot.params['id'];
   }
 
 }
